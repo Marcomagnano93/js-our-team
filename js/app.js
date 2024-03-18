@@ -57,7 +57,7 @@ for(let i = 0; i < team.length; i++){
     //inserisco una card (bootstrap ;O ) usando `...` con i dati di ogni team member
 
     displayTeam.innerHTML += `<div class="col-4">
-                                    <div class="card m-3" style="width: 18rem;">
+                                    <div class="card m-3">
                                         <img src="./img/${team[i].picture}" class="card-img-top">
                                         <div class="card-body team_card">
                                             <h5 class="card-title fw-bolder">${team[i].name}</h5>
