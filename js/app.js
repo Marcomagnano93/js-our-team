@@ -5,8 +5,8 @@ function teamMemberGenerator(memberName, memberRule, profilePicture ){
     const teamMember = {
 
         name: memberName, //string
-        rule: memberRule, //number
-        picture: profilePicture    //string
+        rule: memberRule, //string
+        picture: profilePicture //string
         
     }
 
@@ -46,8 +46,11 @@ console.log(team)
 for(let i = 0; i < team.length; i++){
 
     console.log(`Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}`)
-
-}
-
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM semplicemente come stringhe
+
+    const displayTeam = document.getElementById("team")
+
+    displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}</p>`
+}
+
