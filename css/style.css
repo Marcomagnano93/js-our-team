@@ -1,0 +1,16 @@
+header {
+    background-color: rgba(23, 30, 110, 0.51);
+    color: white;
+}
+
+main {
+    background-color: rgb(247, 232, 213);
+}
+
+.team_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 36, 36);
+}

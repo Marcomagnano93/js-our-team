@@ -1,5 +1,5 @@
 //utilities
-
+//Faccio una funzione per generare un oggetto "team member" con i parametri: nome, ruolo, img profilo
 function teamMemberGenerator(memberName, memberRule, profilePicture ){
 
     const teamMember = {
@@ -10,11 +10,9 @@ function teamMemberGenerator(memberName, memberRule, profilePicture ){
         
     }
 
-    return teamMember //ritorna oggetto
+    return teamMember //return oggetto
 
 }
-
-
 
 
 //******************MAIN*************************/
@@ -36,13 +34,13 @@ const memberSix = teamMemberGenerator("Barbara Ramos", "Graphic Designer", "barb
 
 //crea un array con tutti i membri al suo interno
 
-const team = [memberOne, memberTwo, memberThree, memberFour, memberFive, memberSix]
+const team = [memberOne, memberTwo, memberThree, memberFour, memberFive, memberSix]; //object array
 
 console.log(team)
 
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
+// creo un ciclo for che scorra l'array "team" e per ogni indice dell'array e che faccia il display in console con i suoi dati
 for(let i = 0; i < team.length; i++){
 
     console.log(`Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}`)
@@ -54,6 +52,18 @@ for(let i = 0; i < team.length; i++){
     // displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}</p>`
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
-    displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: <img src="./img/${team[i].picture}" alt=""></p>`
+    // displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: <img src="./img/${team[i].picture}" alt=""></p>`
+// BONUS 2:
+    //inserisco una card (bootstrap ;O ) usando `...` con i dati di ogni team member
+
+    displayTeam.innerHTML += `<div class="col-4">
+                                    <div class="card m-3" style="width: 18rem;">
+                                        <img src="./img/${team[i].picture}" class="card-img-top">
+                                        <div class="card-body team_card">
+                                            <h5 class="card-title fw-bolder">${team[i].name}</h5>
+                                            <p class="card-text">${team[i].rule}</p>
+                                        </div>
+                                    </div>
+                                </div>`
 }
 
