@@ -51,6 +51,9 @@ for(let i = 0; i < team.length; i++){
 
     const displayTeam = document.getElementById("team")
 
-    displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}</p>`
+    // displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: ${team[i].picture}</p>`
+// BONUS 1:
+// Trasformare la stringa foto in una immagine effettiva
+    displayTeam.innerHTML += `<p>Nome: ${team[i].name}, Ruolo: ${team[i].rule}, Foto: <img src="./img/${team[i].picture}" alt=""></p>`
 }
 
